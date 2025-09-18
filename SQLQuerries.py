@@ -2,11 +2,11 @@
 import os
 from pathlib import Path
 
-base_path = Path("data/marketing_campaign_dashboard")
+base_path = Path("/marketing_campaign_dashboard")
 
 # Define paths
 sql_dir = base_path / "sql_queries"
-dashboard_script_path = base_path / "dashboard" / "campaign_dashboard.py"
+dashboard_script_path = base_path / "campaign_dashboard.py"
 
 # Create directories if they don't exist
 sql_dir.mkdir(parents=True, exist_ok=True)
@@ -73,8 +73,8 @@ import psycopg2
 conn = psycopg2.connect(
     host="localhost",
     database="campaign_db",
-    user="your_username",
-    password="your_password"
+    user="postgre",
+    password=1234
 )
 
 # Load data using SQL
@@ -142,5 +142,5 @@ with open(dashboard_script_path, "w") as f:
 # Return final paths
 sql_dir, dashboard_script_path
 Result
-(PosixPath('/data/marketing_campaign_dashboard/sql_queries'),
- PosixPath('/data/marketing_campaign_dashboard/dashboard/campaign_dashboard.
+(PosixPath('/marketing_campaign_dashboard/sql_queries'),
+ PosixPath('/marketing_campaign_dashboard/campaign_dashboard'))

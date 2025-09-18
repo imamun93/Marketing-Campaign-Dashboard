@@ -20,4 +20,4 @@ df['ctr'] = df['clicks'] / df['impressions']
 df['cvr'] = df['conversions'] / df['clicks']
 df['roas'] = df['revenue'] / df['cost']
 df['cpa'] = df['cost'] / df['conversions']
-df.to_csv('../data/simulated_campaign_data.csv', index=False)
+df.to_csv('../simulated_campaign_data.csv', index=False)

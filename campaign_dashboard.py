@@ -11,9 +11,9 @@ import psycopg2
 # Establish database connection
 conn = psycopg2.connect(
     host="localhost",
-    database="campaign_db",
-    user="your_username",
-    password="your_password"
+    database="db/schema.sql",
+    user="postgres",
+    password=1234
 )
 
 # Load data using SQL
