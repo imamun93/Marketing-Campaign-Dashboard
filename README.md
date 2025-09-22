@@ -27,20 +27,17 @@ Build a fully-functional marketing campaign analytics dashboard pipeline that si
 3. Calculate confidence intervals for CPA & ROAS
 4. Visualize results with distribution plots
 
-## Files Included
-- `/data`: Simulated campaign CSV
-- `/db`: PostgreSQL schema
-- `/scripts`: Simulation, ingestion, query logic
-- `/dashboard`: Python dashboard using Plotly
 
 ## Requirements
-- Python 3.8+
+- Python 3
 - PostgreSQL
 - pandas, numpy, plotly, psycopg2, sqlalchemy
 
 ## How to Run
 1. Run `simulate_campaign_data.py`
 2. Create PostgreSQL DB & run `schema.sql`
-3. Execute `insert_to_postgres.py` to load data
-4. Run `query_postgres.py` for analysis
-5. Launch `dashboard.py` to view metrics
+3. Execute `data_loader.py` to load data
+4. Launch `campaign_dashboard.py` to view metrics
+   Example of metric: ![Dashboard for campaign 0](https://github.com/imamun93/Marketing-Campaign-Dashboard/blob/main/campaigndashboardexample.png)
+
+Dash should run on http://127.0.0.1:8050/
