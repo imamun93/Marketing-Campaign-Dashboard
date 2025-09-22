@@ -22,8 +22,6 @@ try:
         # Skip the header row
         next(f) 
         # Use copy_from for efficient bulk loading
-        # IMPORTANT: Based on your sample, the delimiter is a tab ('\t'). 
-        # If it's a comma, change to ','
         cur.copy_from(f, table_name, sep=',', columns=(
             'channel', 'campaign', 'impressions', 'clicks', 'conversions', 
             'cost', 'revenue', 'ctr', 'cvr', 'roas', 'cpa'
